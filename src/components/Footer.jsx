@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#1c1c1c] text-gray-400 pt-16 pb-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 space-y-12">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+
           {/* Col 1 */}
           <div className="space-y-4">
             <a href="#" className="flex flex-col">
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
           <p>© {new Date().getFullYear()} Fountain Gents Saloon Dubai. All rights reserved.</p>
           <div className="flex items-center gap-1">
-            <span>Designed for Luxury Gents in Dubai</span>
+            <span>Designed by Ajo John</span>
           </div>
         </div>
 

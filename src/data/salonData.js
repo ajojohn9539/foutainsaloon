@@ -93,7 +93,7 @@ export const salonInfo = {
       time: "45 Mins",
       description: "Steam exfoliation, blackhead extraction, 24K gold collagen face mask, and rejuvenating facial reflexology.",
       popular: true,
-      image: "https://images.unsplash.com/photo-1512290900673-7002ff01e5a0?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 5,

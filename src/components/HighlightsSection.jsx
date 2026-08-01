@@ -82,7 +82,7 @@ export default function HighlightsSection() {
               <div className="bg-[#faf6f0] p-6 rounded-2xl border border-[#c6a87c]/20 space-y-2">
                 <span className="text-xs text-[#c6a87c] font-bold uppercase tracking-wider block">Official WhatsApp Contact</span>
                 <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-mono block">
-                  {saloonInfo.phoneDisplay}
+                  {salonInfo.phoneDisplay}
                 </span>
                 <p className="text-[11px] text-gray-500">Available 9:00 AM – 11:30 PM Every Day</p>
               </div>

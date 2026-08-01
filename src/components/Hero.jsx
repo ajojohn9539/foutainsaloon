@@ -5,7 +5,7 @@ import { MapPin, MessageSquare, ArrowRight, Star } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="relative min-h-[85vh] flex items-center bg-[#faf8f5] overflow-hidden">
-      {/* Background Salon Image matching Shakirovna */}
+      {/* Background Salon Image matching Fountain Gents Saloon */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat filter brightness-95"
         style={{ backgroundImage: `url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80')` }}
@@ -16,14 +16,14 @@ export default function Hero() {
       {/* Hero Content Container */}
       <div className="max-w-7xl mx-auto px-6 py-16 w-full relative z-10">
         
-        {/* Floating Glassmorphic Card - Shakirovna 1:1 Match */}
+        {/* Floating Glassmorphic Card - Fountain Gents Saloon */}
         <div className="shakirovna-glass-card p-8 sm:p-12 rounded-3xl max-w-xl space-y-6 shadow-2xl animate-in fade-in slide-in-from-left-4 duration-500">
           <p className="text-[#b59567] text-xs sm:text-sm font-semibold tracking-wide uppercase">
             {salonInfo.heroTagline}
           </p>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1c1c1c] leading-tight tracking-tight">
-            Luxury Gents Salon <br />
+            Fountain Gents Saloon <br />
             <span className="text-[#c6a87c]">in Dubai</span>
           </h1>
 
@@ -36,7 +36,7 @@ export default function Hero() {
             {salonInfo.location}
           </p>
 
-          {/* Dual Buttons matching Shakirovna */}
+          {/* Dual Buttons */}
           <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href={getWhatsAppUrl()}

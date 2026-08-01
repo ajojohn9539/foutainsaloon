@@ -15,7 +15,7 @@ export default function CtaBanner() {
             Ready for Your Luxury Makeover?
           </h2>
           <p className="text-white/90 font-medium text-sm sm:text-base max-w-xl">
-            Book your visit now with Shakirovna master barbers in Dubai.
+            Book your visit now with Fountain Gents Saloon master barbers in Dubai.
           </p>
         </div>
 

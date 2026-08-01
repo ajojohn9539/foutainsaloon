@@ -14,7 +14,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello Shakirovna Salon! Appointment Request:%0A*Name*: ${formData.name}%0A*Phone*: ${formData.phone}%0A*Service*: ${formData.service}%0A*Date*: ${formData.date}%0A*Notes*: ${formData.notes}`;
+    const msg = `Hello Fountain Gents Saloon! Appointment Request:%0A*Name*: ${formData.name}%0A*Phone*: ${formData.phone}%0A*Service*: ${formData.service}%0A*Date*: ${formData.date}%0A*Notes*: ${formData.notes}`;
     window.open(`https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}&text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -29,7 +29,7 @@ export default function ContactSection() {
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-3">
               <span className="text-[#c6a87c] text-xs font-bold uppercase tracking-widest block">
-                VISIT SHAKIROVNA SALON
+                VISIT FOUNTAIN GENTS SALOON
               </span>
 
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1c1c1c]">
@@ -143,10 +143,10 @@ export default function ContactSection() {
                         className="w-full px-4 py-3 rounded-xl bg-[#faf8f5] border border-gray-200 text-gray-900 text-xs focus:border-[#c6a87c] outline-none"
                       >
                         <option>Executive Scissor & Fade Haircut (AED 35)</option>
-                        <option>Shakirovna Signature Hot Towel Shave (AED 25)</option>
+                        <option>Fountain Signature Hot Towel Shave (AED 25)</option>
                         <option>Deep Cleansing Gold Collagen Facial (AED 75)</option>
                         <option>European Scalp & Shoulder Massage (AED 40)</option>
-                        <option>Shakirovna Full VIP Grooming Package (AED 120)</option>
+                        <option>Fountain Full VIP Grooming Package (AED 120)</option>
                       </select>
                     </div>
 

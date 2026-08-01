@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-gray-600 text-xs sm:text-sm">
-            Read real feedback from executives, tourists, and residents visiting Shakirovna Gents Salon Dubai.
+            Read real feedback from executives, tourists, and residents visiting Fountain Gents Saloon Dubai.
           </p>
         </div>
 

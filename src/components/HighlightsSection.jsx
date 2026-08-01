@@ -34,12 +34,12 @@ export default function HighlightsSection() {
           {/* Left Column */}
           <div className="lg:col-span-6 space-y-6">
             <span className="text-[#c6a87c] text-xs font-bold uppercase tracking-widest block">
-              THE SHAKIROVNA EXPERIENCE
+              THE FOUNTAIN EXPERIENCE
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight leading-tight">
               Why Gentlemen Choose <br />
-              <span className="text-[#c6a87c]">Shakirovna Gents Salon</span>
+              <span className="text-[#c6a87c]">Fountain Gents Saloon</span>
             </h2>
 
             <p className="text-gray-600 text-sm leading-relaxed">

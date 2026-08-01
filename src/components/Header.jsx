@@ -10,13 +10,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* Left Logo - Shakirovna Serif Style */}
+        {/* Left Logo - Fountain Gents Saloon Serif Style */}
         <a href="#" className="flex flex-col">
           <span className="font-serif text-xl sm:text-2xl font-bold tracking-widest text-[#1c1c1c] uppercase">
-            SHAKIROVNA GENTS SALON
+            FOUNTAIN GENTS SALOON
           </span>
           <span className="text-[9px] tracking-[0.25em] text-[#c6a87c] font-semibold uppercase">
-            Style, Elegance & Self-Care
+            Style, Precision & Comfort
           </span>
         </a>
 

@@ -1,5 +1,5 @@
 export const salonInfo = {
-  name: "SHAKIROVNA GENTS SALON",
+  name: "FOUNTAIN GENTS SALOON",
   tagline: "Premium European Spa & Barber Lounge in Dubai",
   established: "2021",
   phone: "+971 55 840 1265",
@@ -7,7 +7,7 @@ export const salonInfo = {
   whatsapp: "971558401265",
   location: "Commercial Zone, Dubai, United Arab Emirates",
   timing: "Everyday: 9:00 AM – 11:30 PM",
-  email: "info@shakirovnasalon.ae",
+  email: "info@fountaingentssaloon.ae",
 
   heroTagline: "Redefining Style, Elegance & Self-Care",
   heroTitle: "Luxury Gents Salon in Dubai",
@@ -23,23 +23,23 @@ export const salonInfo = {
   highlights: [
     {
       id: 1,
-      title: "Master European Barbers",
-      desc: "Specialists in modern skin fades, executive scissor cuts, hot towel shaves, and beard contouring."
+      title: "Master European Craftsmanship",
+      desc: "Our experienced barbers specialize in precision haircuts, sharp beard line-ups, and modern fades tailored to your face shape."
     },
     {
       id: 2,
-      title: "Strict Sterilization & Single-Use Towels",
-      desc: "Single-use disposable capes, sterilized razors, and surgical-grade sanitation after every client."
+      title: "Strict Hygiene & Safety",
+      desc: "Single-use disposable towels, sterilized razors, and deep equipment sanitization after every client."
     },
     {
       id: 3,
-      title: "Transparent AED Pricing",
-      desc: "5-star luxury salon experience with transparent rates from 10 AED massages to 35 AED haircut specials."
+      title: "Best Value in Dubai",
+      desc: "Premium salon experience at unbeatable AED rates—from 15 AED waxing to 35 AED executive haircuts!"
     },
     {
       id: 4,
-      title: "VIP Lounge & Complimentary Drinks",
-      desc: "Relax in ergonomic leather reclining chairs, enjoy complimentary artisan coffee, and soak in calm ambient music."
+      title: "Relaxing Spa Ambiance",
+      desc: "Enjoy hot towels, scalp reflexology, complimentary espresso, and a warm atmosphere."
     }
   ],
 
@@ -69,7 +69,7 @@ export const salonInfo = {
     {
       id: 2,
       category: "shaving",
-      title: "Shakirovna Signature Hot Towel Shave",
+      title: "Fountain Signature Hot Towel Shave",
       price: "AED 25",
       time: "20 Mins",
       description: "Warm steam towel infusion, rich lather shave with Japanese steel razor, razor line-up, and soothing aftershave lotion.",
@@ -129,7 +129,7 @@ export const salonInfo = {
     {
       id: 8,
       category: "packages",
-      title: "Shakirovna Full VIP Grooming Package",
+      title: "Fountain Full VIP Grooming Package",
       price: "AED 120",
       time: "75 Mins",
       description: "Includes Executive Haircut, Signature Hot Towel Shave, Gold Facial, Scalp Massage, and Nose/Ear Waxing.",
@@ -158,7 +158,7 @@ export const salonInfo = {
       id: 1,
       name: "Tariq Al-Mansoor",
       role: "Business Executive",
-      text: "Shakirovna Salon is the top choice in Dubai! The hot towel shave and gold facial leave you feeling refreshed and confident. Highly recommended!",
+      text: "Fountain Gents Saloon is the top choice in Dubai! The hot towel shave and gold facial leave you feeling refreshed and confident. Highly recommended!",
       rating: 5
     },
     {
@@ -180,7 +180,7 @@ export const salonInfo = {
 
 export const getWhatsAppUrl = (customText = "") => {
   const defaultText = customText 
-    ? `Hello Shakirovna Gents Salon, I would like to book an appointment for: *${customText}*`
-    : `Hello *Shakirovna Gents Salon*, I would like to book a visit.`;
+    ? `Hello *Fountain Gents Saloon*, I would like to book an appointment for: *${customText}*`
+    : `Hello *Fountain Gents Saloon*, I would like to book a visit.`;
   return `https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}&text=${encodeURIComponent(defaultText)}`;
 };

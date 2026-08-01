@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { salonInfo, getWhatsAppUrl } from '../data/salonData';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MapPin } from 'lucide-react';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-sm border-b border-white/10 text-white">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        
+
         {/* Left Teal Logo Badge */}
         <a href="#" className="flex items-center gap-3">
           <div className="bg-[#009698] text-white px-4 py-2 rounded-lg flex flex-col justify-center shadow-md">
@@ -46,6 +46,15 @@ export default function Header() {
         {/* Right Action Button */}
         <div className="hidden md:flex items-center gap-4">
           <a
+            href="https://maps.app.goo.gl/Sf11sAKcxFvbSMDo9?g_st=iwb"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 text-white/90 hover:text-teal-400 transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <MapPin className="w-4 h-4" />
+            LOCATION
+          </a>
+          <a
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noreferrer"
@@ -72,7 +81,16 @@ export default function Header() {
           <a href="#about" onClick={() => setMobileOpen(false)} className="block text-xs font-bold uppercase tracking-wider text-white">GALLERY</a>
           <a href="#about" onClick={() => setMobileOpen(false)} className="block text-xs font-bold uppercase tracking-wider text-white">ABOUT US</a>
           <a href="#contact" onClick={() => setMobileOpen(false)} className="block text-xs font-bold uppercase tracking-wider text-white">CONTACT</a>
-          
+          <a 
+            href="https://maps.app.goo.gl/Sf11sAKcxFvbSMDo9?g_st=iwb" 
+            target="_blank" 
+            rel="noreferrer" 
+            onClick={() => setMobileOpen(false)} 
+            className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-teal-400"
+          >
+            <MapPin className="w-4 h-4" /> LOCATION
+          </a>
+
           <div className="pt-2">
             <a
               href={getWhatsAppUrl()}

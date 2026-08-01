@@ -1,6 +1,6 @@
 import React from 'react';
 import { salonInfo, getWhatsAppUrl } from '../data/salonData';
-import { Scissors, Sparkles, Armchair, Calendar, ArrowRight } from 'lucide-react';
+import { Scissors, Sparkles, Armchair, Calendar, ArrowRight, MapPin } from 'lucide-react';
 
 export default function Hero() {
   const features = [
@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-between bg-black overflow-hidden font-sans">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat filter brightness-90"
         style={{ backgroundImage: `url('/images/bgmainimage.jpg')` }}
       />
@@ -69,6 +69,15 @@ export default function Hero() {
             >
               BOOK NOW
             </a>
+
+            <a
+              href="https://maps.app.goo.gl/Sf11sAKcxFvbSMDo9?g_st=iwb"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 border-2 border-teal-500/50 hover:border-teal-400 bg-black/30 hover:bg-black/60 text-white font-bold text-xs sm:text-sm py-3.5 px-8 rounded-lg shadow-md tracking-wider uppercase transition-all duration-300"
+            >
+              <MapPin className="w-4 h-4 text-teal-400" /> LOCATION
+            </a>
           </div>
         </div>
       </div>
@@ -79,8 +88,8 @@ export default function Hero() {
           {features.map((item, index) => {
             const IconComponent = item.icon;
             return (
-              <a 
-                key={index} 
+              <a
+                key={index}
                 href={getWhatsAppUrl(item.title)}
                 target="_blank"
                 rel="noreferrer"

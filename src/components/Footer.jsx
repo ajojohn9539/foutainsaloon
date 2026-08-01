@@ -1,61 +1,83 @@
 import React from 'react';
-import { salonInfo } from '../data/salonData';
-import { MapPin } from 'lucide-react';
+import { salonInfo, getWhatsAppUrl } from '../data/salonData';
+import { MapPin, Phone, Clock, Mail, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300 py-12 px-6 md:px-12 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-[#1c1c1c] text-gray-400 pt-16 pb-12 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 space-y-12">
         
-        {/* Col 1 */}
-        <div>
-          <h3 className="text-white text-xl font-bold mb-4">Crown & Royal Saloon</h3>
-          <p className="text-slate-400 text-sm leading-relaxed">
-            Leading the future of gents grooming with high-quality hair styling equipment, precision beard sculpting, and expert spa services in Dubai.
-          </p>
-        </div>
-
-        {/* Col 2 */}
-        <div>
-          <h4 className="text-white font-bold mb-4">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-amber-500 transition">Our Story</a></li>
-            <li><a href="#about" className="hover:text-amber-500 transition">Why Choose Us</a></li>
-            <li><a href="#services" className="hover:text-amber-500 transition">Services & Rates</a></li>
-            <li><a href="#testimonials" className="hover:text-amber-500 transition">Reviews</a></li>
-            <li><a href="#contact" className="hover:text-amber-500 transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        {/* Col 3 */}
-        <div>
-          <h4 className="text-white font-bold mb-4">Contact Info</h4>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <p className="text-slate-400 text-sm leading-relaxed flex-grow">
-              <span className="text-white font-bold block mb-1">Crown & Royal Gents Saloon Pvt Ltd</span>
-              Downtown Commercial District,<br />
-              Business Bay Plaza, 1st Floor,<br />
-              Dubai, United Arab Emirates<br />
-              <span className="block mt-2 font-semibold text-white">Phone: {salonInfo.phoneDisplay}</span>
-              <span className="block font-semibold text-white">Email: {salonInfo.email}</span>
-            </p>
-            <a 
-              href={`https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}`}
-              target="_blank"
-              rel="noreferrer"
-              className="group relative w-32 h-32 rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700 hover:border-amber-500 transition-all flex-shrink-0 self-start md:self-center bg-slate-950 flex flex-col items-center justify-center p-3 text-center"
-              title="Click to view location"
-            >
-              <MapPin className="w-8 h-8 text-amber-500 mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-[10px] font-bold text-white uppercase tracking-wider">Dubai Branch</span>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          
+          {/* Col 1 */}
+          <div className="space-y-4">
+            <a href="#" className="flex flex-col">
+              <span className="font-serif text-xl font-bold tracking-widest text-white uppercase">
+                SHAKIROVNA SALON
+              </span>
+              <span className="text-[9px] tracking-[0.25em] text-[#c6a87c] font-semibold uppercase mt-0.5">
+                Style, Elegance & Self-Care
+              </span>
             </a>
+
+            <p className="text-xs text-gray-400 leading-relaxed">
+              Dubai's premier European gents salon & spa lounge for executive hair cuts, hot towel shaves, facial treatments, and reflexology massages.
+            </p>
+          </div>
+
+          {/* Col 2 */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Quick Navigation</h4>
+            <ul className="space-y-2 text-xs">
+              <li><a href="#" className="hover:text-[#c6a87c] transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-[#c6a87c] transition-colors">The Shakirovna Experience</a></li>
+              <li><a href="#services" className="hover:text-[#c6a87c] transition-colors">Services & Categories</a></li>
+              <li><a href="#pricing" className="hover:text-[#c6a87c] transition-colors">Full AED Price Menu</a></li>
+              <li><a href="#contact" className="hover:text-[#c6a87c] transition-colors">Location & Contacts</a></li>
+            </ul>
+          </div>
+
+          {/* Col 3 */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Services Menu</h4>
+            <ul className="space-y-2 text-xs">
+              <li><a href="#services" className="hover:text-[#c6a87c] transition-colors">Executive Scissor Cut (AED 35)</a></li>
+              <li><a href="#services" className="hover:text-[#c6a87c] transition-colors">Hot Towel Royal Shave (AED 25)</a></li>
+              <li><a href="#services" className="hover:text-[#c6a87c] transition-colors">Gold Collagen Spa Facial (AED 75)</a></li>
+              <li><a href="#services" className="hover:text-[#c6a87c] transition-colors">Scalp & Shoulder Reflexology (AED 40)</a></li>
+              <li><a href="#services" className="hover:text-[#c6a87c] transition-colors">Shakirovna VIP Package (AED 120)</a></li>
+            </ul>
+          </div>
+
+          {/* Col 4 */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Contact & Location</h4>
+            <ul className="space-y-2.5 text-xs">
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-[#c6a87c] shrink-0 mt-0.5" />
+                <span>{salonInfo.location}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#c6a87c] shrink-0" />
+                <span>{salonInfo.phoneDisplay}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-[#c6a87c] shrink-0" />
+                <span>{salonInfo.timing}</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+          <p>© {new Date().getFullYear()} Shakirovna Gents Salon Dubai. All rights reserved.</p>
+          <div className="flex items-center gap-1">
+            <span>Designed for Luxury Gents in Dubai</span>
           </div>
         </div>
 
-      </div>
-
-      <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-slate-500 max-w-7xl mx-auto">
-        &copy; {new Date().getFullYear()} Crown & Royal Saloon Pvt Ltd. All rights reserved.
       </div>
     </footer>
   );

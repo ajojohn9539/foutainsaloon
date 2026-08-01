@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,36 +11,44 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased overflow-x-hidden;
+    background-color: #faf8f5;
+    color: #1c1c1c;
+    @apply antialiased overflow-x-hidden;
   }
 }
 
-.glass-nav {
-  @apply sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300;
-}
-
-.btn-construction {
-  @apply inline-flex items-center justify-center px-6 py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-amber-500/20 hover:shadow-amber-500/35 transition-all duration-300 hover:scale-105 active:scale-95 text-sm uppercase tracking-wider;
-}
-
-.btn-construction-outline {
-  @apply inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold rounded-xl transition-all duration-300 text-sm uppercase tracking-wider;
-}
-
-.section-title {
-  @apply text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight;
+.font-serif {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
 }
 
 .text-gold-gradient {
-  @apply text-amber-500 font-black;
+  background: linear-gradient(135deg, #d4af37 0%, #c6a87c 50%, #b59567 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bg-gold-gradient {
-  @apply bg-amber-500 text-slate-900;
+  background: linear-gradient(135deg, #d4af37 0%, #c6a87c 50%, #b59567 100%);
 }
 
-.glass-card {
-  @apply bg-white rounded-2xl border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300;
+.shakirovna-glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(198, 168, 124, 0.3);
+}
+
+.btn-shakirovna-gold {
+  background: linear-gradient(135deg, #c6a87c 0%, #b59567 100%);
+  color: #ffffff;
+  @apply font-bold transition-all duration-300 shadow-md hover:shadow-lg hover:brightness-105 active:scale-95 inline-flex items-center justify-center gap-2;
+}
+
+.btn-shakirovna-outline {
+  border: 1.5px solid #c6a87c;
+  color: #1c1c1c;
+  background-color: transparent;
+  @apply font-semibold transition-all duration-300 hover:bg-[#c6a87c]/10 hover:border-[#b59567] inline-flex items-center justify-center gap-2;
 }
 
 /* Custom scrollbar */
@@ -48,9 +56,9 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #faf8f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f59e0b;
+  background: #c6a87c;
   border-radius: 4px;
 }

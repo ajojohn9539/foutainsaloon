@@ -1,174 +1,186 @@
 export const salonInfo = {
-  name: "CROWN & ROYAL GENTS SALOON",
-  tagline: "Exclusive Men's Grooming & Luxury Spa Experience",
-  established: "2020",
+  name: "SHAKIROVNA GENTS SALON",
+  tagline: "Premium European Spa & Barber Lounge in Dubai",
+  established: "2021",
   phone: "+971 55 840 1265",
   phoneDisplay: "+971 55 840 1265",
   whatsapp: "971558401265",
-  location: "Downtown Dubai Commercial District, UAE",
-  timing: "Daily: 9:00 AM – 11:30 PM",
-  email: "contact@crownroyalgents.ae",
-  whatsappMessage: encodeURIComponent("Hello! I would like to book an appointment at Crown & Royal Gents Saloon."),
-  
-  heroBadge: "PREMIUM GENTS SPA & BARBER SHOP",
-  heroTitle: "Redefining Executive Grooming & Elegance",
-  heroSubtitle: "Experience world-class hair styling, precision beard sculpting, invigorating skin facials, and therapeutic massages in Dubai's finest luxury gents lounge.",
+  location: "Commercial Zone, Dubai, United Arab Emirates",
+  timing: "Everyday: 9:00 AM – 11:30 PM",
+  email: "info@shakirovnasalon.ae",
+
+  heroTagline: "Redefining Style, Elegance & Self-Care",
+  heroTitle: "Luxury Gents Salon in Dubai",
+  heroSubtitle: "Experience world-class European grooming, precision hair styling, executive shaves, organic facials, and relaxing deep-tissue massages.",
 
   stats: [
-    { value: "15k+", label: "Happy Gentlemen Served" },
-    { value: "12+", label: "Master Stylists & Barbers" },
-    { value: "4.9 ★", label: "Google Customer Rating" },
-    { value: "100%", label: "Sterilized & Hygienic" }
+    { value: "20k+", label: "Delighted Gentlemen" },
+    { value: "15+", label: "European Master Stylists" },
+    { value: "5.0 ★", label: "Google Review Rating" },
+    { value: "100%", label: "Single-Use Hygiene Guarantee" }
   ],
 
   highlights: [
     {
-      id: "master-barbers",
-      title: "Master Barber Artistry",
-      desc: "Precision fades, tailored hair cuts, and bespoke razor line-ups by certified styling experts.",
-      icon: "Scissors"
+      id: 1,
+      title: "Master European Barbers",
+      desc: "Specialists in modern skin fades, executive scissor cuts, hot towel shaves, and beard contouring."
     },
     {
-      id: "hygiene-first",
-      title: "Gold Standard Hygiene",
-      desc: "100% single-use disposable towels, hospital-grade equipment sterilization after every client.",
-      icon: "ShieldCheck"
+      id: 2,
+      title: "Strict Sterilization & Single-Use Towels",
+      desc: "Single-use disposable capes, sterilized razors, and surgical-grade sanitation after every client."
     },
     {
-      id: "unbeatable-value",
-      title: "Unbeatable AED Pricing",
-      desc: "Luxury 5-star spa ambience with budget-friendly rates starting from just 10 AED.",
-      icon: "Sparkles"
+      id: 3,
+      title: "Transparent AED Pricing",
+      desc: "5-star luxury salon experience with transparent rates from 10 AED massages to 35 AED haircut specials."
     },
     {
-      id: "vip-comfort",
-      title: "VIP Lounge & Amenities",
-      desc: "Complimentary espresso, soothing ambient lighting, ergonomic massage chairs, and high-speed Wi-Fi.",
-      icon: "Crown"
+      id: 4,
+      title: "VIP Lounge & Complimentary Drinks",
+      desc: "Relax in ergonomic leather reclining chairs, enjoy complimentary artisan coffee, and soak in calm ambient music."
     }
   ],
 
   categories: [
     { id: "all", title: "All Services" },
-    { id: "haircut", title: "Hair Styling & Fades" },
-    { id: "beard", title: "Beard Sculpting & Shave" },
+    { id: "haircuts", title: "Haircuts & Styling" },
+    { id: "shaving", title: "Shaving & Beard Care" },
+    { id: "treatments", title: "Scalp & Hair Care" },
     { id: "facials", title: "Skincare & Facials" },
-    { id: "massages", title: "Relaxing Massages" },
-    { id: "color", title: "Hair & Beard Color" },
+    { id: "massages", title: "Spa & Massage Therapy" },
+    { id: "color", title: "Hair & Beard Dye" },
+    { id: "waxing", title: "Body & Face Waxing" },
     { id: "packages", title: "VIP Grooming Packages" }
   ],
 
   services: [
     {
       id: 1,
-      category: "haircut",
-      title: "Signature Executive Haircut",
+      category: "haircuts",
+      title: "Executive Scissor & Fade Haircut",
       price: "AED 35",
       time: "30 Mins",
-      description: "Consultation, precision scissor/clipper haircut, neck cleanup, and professional styling with premium hair wax.",
+      description: "Consultation, precision scissor cut or skin fade, hair wash with organic shampoo, blow-dry, and luxury styling.",
       popular: true,
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 2,
-      category: "beard",
-      title: "Royal Hot Towel Beard Trim & Sculpting",
+      category: "shaving",
+      title: "Shakirovna Signature Hot Towel Shave",
       price: "AED 25",
       time: "20 Mins",
-      description: "Hot towel treatment, sharp straight razor edge-up, beard oil conditioning, and soothing post-shave balm.",
+      description: "Warm steam towel infusion, rich lather shave with Japanese steel razor, razor line-up, and soothing aftershave lotion.",
       popular: true,
       image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 3,
+      category: "treatments",
+      title: "Keratin Scalp Therapy & Hair Wash",
+      price: "AED 50",
+      time: "35 Mins",
+      description: "Deep nourishing keratin treatment that repairs damaged hair fibers, restores natural shine, and prevents hair fall.",
+      popular: true,
+      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      id: 4,
       category: "facials",
-      title: "Gold Glowing Facial & Pore Cleansing",
+      title: "Deep Cleansing Gold Collagen Facial",
       price: "AED 75",
       time: "45 Mins",
-      description: "Deep exfoliation steam, blackhead removal, organic gold collagen mask, and relaxing facial massage.",
+      description: "Steam exfoliation, blackhead extraction, 24K gold collagen face mask, and rejuvenating facial reflexology.",
       popular: true,
       image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80"
     },
     {
-      id: 4,
+      id: 5,
       category: "massages",
-      title: "Scalp, Neck & Shoulder Reflexology",
+      title: "European Relaxation Scalp & Shoulder Massage",
       price: "AED 40",
       time: "25 Mins",
-      description: "Relieve tension and stress with therapeutic warm oil massage for head, shoulders, and upper back.",
+      description: "Relieve stress and muscle stiffness with warm herbal oil massage targeting scalp, neck, and upper back.",
       popular: true,
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80"
     },
     {
-      id: 5,
+      id: 6,
       category: "color",
-      title: "Organic Natural Black Beard & Hair Dye",
+      title: "Natural Black Hair & Beard Color",
       price: "AED 30",
       time: "25 Mins",
-      description: "Ammonia-free, long-lasting gray hair coverage for full beard and hair with scalp nourish treatment.",
+      description: "Ammonia-free, long-lasting gray hair coverage for beard and head hair with natural luster finish.",
       popular: false,
       image: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80"
     },
     {
-      id: 6,
-      category: "packages",
-      title: "The Ultimate Royal Grooming VIP Package",
-      price: "AED 120",
-      time: "75 Mins",
-      description: "Includes Executive Haircut, Royal Hot Towel Beard Trim, Gold Glowing Facial, Scalp Massage, and Ear/Nose Waxing.",
-      popular: true,
-      image: "https://images.unsplash.com/photo-1517832606589-7157a690be72?auto=format&fit=crop&w=600&q=80"
-    },
-    {
       id: 7,
-      category: "haircut",
-      title: "Skin Fade & Razor Lineup",
-      price: "AED 45",
-      time: "35 Mins",
-      description: "Ultra-sharp modern skin fade with foil shaver finish and precise straight razor outline.",
+      category: "waxing",
+      title: "Nose, Ear & Eyebrow Precision Waxing",
+      price: "AED 20",
+      time: "15 Mins",
+      description: "Painless organic wax for unwanted nose, ear, and cheek hair line-ups.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1512290900673-7002ff01e5a0?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 8,
-      category: "facials",
-      title: "Charcoal Detox Scrub & Blackhead Treatment",
-      price: "AED 50",
-      time: "30 Mins",
-      description: "Purifying activated charcoal mask that unclogs pores, controls skin oiliness, and restores fresh skin glow.",
-      popular: false,
-      image: "https://images.unsplash.com/photo-1512290900673-7002ff01e5a0?auto=format&fit=crop&w=600&q=80"
+      category: "packages",
+      title: "Shakirovna Full VIP Grooming Package",
+      price: "AED 120",
+      time: "75 Mins",
+      description: "Includes Executive Haircut, Signature Hot Towel Shave, Gold Facial, Scalp Massage, and Nose/Ear Waxing.",
+      popular: true,
+      image: "https://images.unsplash.com/photo-1517832606589-7157a690be72?auto=format&fit=crop&w=600&q=80"
     }
+  ],
+
+  priceList: [
+    { title: "Haircut & Styling", price: "AED 35" },
+    { title: "Kids Haircut (Under 12)", price: "AED 25" },
+    { title: "Beard Trim & Edge Up", price: "AED 20" },
+    { title: "Hot Towel Royal Shave", price: "AED 25" },
+    { title: "Beard Color / Dye", price: "AED 30" },
+    { title: "Hair Color Treatment", price: "AED 40" },
+    { title: "Scalp Massage (15 min)", price: "AED 20" },
+    { title: "Full Head & Shoulder Massage (30 min)", price: "AED 40" },
+    { title: "Deep Scrub Facial", price: "AED 50" },
+    { title: "Gold Collagen Spa Facial", price: "AED 75" },
+    { title: "Ear & Nose Waxing", price: "AED 15" },
+    { title: "Complete VIP Grooming Package", price: "AED 120" }
   ],
 
   testimonials: [
     {
       id: 1,
-      name: "Rashid Al Mansoori",
+      name: "Tariq Al-Mansoor",
       role: "Business Executive",
-      text: "The best gents salon in Dubai! Their razor line-up and gold facial are incredible. Clean, professional, and great value.",
+      text: "Shakirovna Salon is the top choice in Dubai! The hot towel shave and gold facial leave you feeling refreshed and confident. Highly recommended!",
       rating: 5
     },
     {
       id: 2,
-      name: "Marcus Vance",
-      role: "Expat Professional",
-      text: "Extremely hygienic and super skilled barbers. Booking via WhatsApp took 10 seconds and the staff treat you like royalty.",
+      name: "Alexander Petrov",
+      role: "Dubai Resident",
+      text: "Outstanding European style haircut! Very clean, luxurious ambiance, polite barbers, and instant WhatsApp booking.",
       rating: 5
     },
     {
       id: 3,
-      name: "Ahmed Hassan",
-      role: "Regular Gentleman Client",
-      text: "Affordable luxury at its finest. The head and shoulder massage after haircut is the highlight of my week!",
+      name: "Omar Saeed",
+      role: "Regular Gentleman",
+      text: "Best price to quality ratio in Dubai. 35 AED for an executive haircut with styling in a 5-star venue!",
       rating: 5
     }
   ]
 };
 
-export const getWhatsAppBookingUrl = (serviceTitle = "") => {
-  const text = serviceTitle 
-    ? `Hello! I want to book an appointment for *${serviceTitle}* at Crown & Royal Gents Saloon.`
-    : `Hello! I would like to book an appointment at Crown & Royal Gents Saloon.`;
-  return `https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}&text=${encodeURIComponent(text)}`;
+export const getWhatsAppUrl = (customText = "") => {
+  const defaultText = customText 
+    ? `Hello Shakirovna Gents Salon, I would like to book an appointment for: *${customText}*`
+    : `Hello *Shakirovna Gents Salon*, I would like to book a visit.`;
+  return `https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}&text=${encodeURIComponent(defaultText)}`;
 };

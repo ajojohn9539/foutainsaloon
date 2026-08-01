@@ -1,72 +1,106 @@
 import React from 'react';
 import { salonInfo, getWhatsAppUrl } from '../data/salonData';
-import { MapPin, MessageSquare, ArrowRight, Star } from 'lucide-react';
+import { Scissors, Sparkles, Armchair, Calendar, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
+  const features = [
+    {
+      icon: Scissors,
+      title: "EXPERT BARBERS",
+      desc: "Skilled & experienced professionals"
+    },
+    {
+      icon: Sparkles,
+      title: "PREMIUM PRODUCTS",
+      desc: "High-quality products for the best results"
+    },
+    {
+      icon: Armchair,
+      title: "RELAXING ENVIRONMENT",
+      desc: "Modern, clean & comfortable space"
+    },
+    {
+      icon: Calendar,
+      title: "EASY BOOKING",
+      desc: "Book your appointment with ease"
+    }
+  ];
+
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-[#faf8f5] overflow-hidden">
-      {/* Background Salon Image matching Fountain Gents Saloon */}
+    <section className="relative min-h-[92vh] flex flex-col justify-between bg-black overflow-hidden font-sans">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat filter brightness-95"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80')` }}
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat filter brightness-90"
+        style={{ backgroundImage: `url('/images/bgmainimage.jpg')` }}
       />
-      {/* Soft Vignette Overlay */}
-      <div className="absolute inset-0 bg-black/25 z-0" />
 
-      {/* Hero Content Container */}
-      <div className="max-w-7xl mx-auto px-6 py-16 w-full relative z-10">
-        
-        {/* Floating Glassmorphic Card - Fountain Gents Saloon */}
-        <div className="shakirovna-glass-card p-8 sm:p-12 rounded-3xl max-w-xl space-y-6 shadow-2xl animate-in fade-in slide-in-from-left-4 duration-500">
-          <p className="text-[#b59567] text-xs sm:text-sm font-semibold tracking-wide uppercase">
-            {salonInfo.heroTagline}
-          </p>
+      {/* Dark Vignette Overlay for Crisp Readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-0" />
 
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1c1c1c] leading-tight tracking-tight">
-            Fountain Gents Saloon <br />
-            <span className="text-[#c6a87c]">in Dubai</span>
+      {/* Spacer for Top Header */}
+      <div className="h-20" />
+
+      {/* Hero Central Content */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 w-full relative z-10 my-auto">
+        <div className="max-w-2xl space-y-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight uppercase">
+            LOOK GOOD. <br />
+            <span className="text-[#00c9c3] text-teal-400">FEEL CONFIDENT.</span>
           </h1>
 
-          <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed">
-            {salonInfo.heroSubtitle}
+          <p className="text-base sm:text-lg text-gray-200 font-medium max-w-lg leading-relaxed">
+            Professional grooming services in a luxurious environment.
           </p>
 
-          <p className="text-xs sm:text-sm text-gray-800 flex items-center gap-1.5 font-semibold pt-1">
-            <MapPin className="w-4 h-4 text-[#c6a87c] shrink-0" />
-            {salonInfo.location}
-          </p>
-
-          {/* Dual Buttons */}
-          <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
-            <a
-              href={getWhatsAppUrl()}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-shakirovna-gold font-bold text-xs sm:text-sm py-3.5 px-7 rounded-full shadow-md inline-flex items-center gap-2"
-            >
-              <MessageSquare className="w-4 h-4" />
-              Book Appointment
-            </a>
-
+          {/* Action Buttons */}
+          <div className="pt-4 flex flex-wrap items-center gap-4">
             <a
               href="#services"
-              className="btn-shakirovna-outline font-semibold text-xs sm:text-sm py-3.5 px-7 rounded-full shadow-sm inline-flex items-center gap-2"
+              className="bg-[#009698] hover:bg-[#008183] text-white font-bold text-xs sm:text-sm py-3.5 px-8 rounded-lg shadow-lg tracking-wider uppercase transition-all duration-300 transform hover:scale-105"
             >
-              Explore Services
-              <ArrowRight className="w-4 h-4 text-[#c6a87c]" />
+              OUR SERVICES
+            </a>
+
+            <a
+              href={getWhatsAppUrl("Booking from Hero")}
+              target="_blank"
+              rel="noreferrer"
+              className="border-2 border-white/80 hover:border-white bg-black/20 hover:bg-white/10 text-white font-bold text-xs sm:text-sm py-3.5 px-8 rounded-lg shadow-md tracking-wider uppercase transition-all duration-300"
+            >
+              BOOK NOW
             </a>
           </div>
-
-          <div className="pt-2 flex items-center gap-2 text-xs text-gray-600 font-medium">
-            <div className="flex text-amber-500 gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-amber-500" />
-              ))}
-            </div>
-            <span>5.0 Star Rating (800+ Dubai Reviews)</span>
-          </div>
         </div>
+      </div>
 
+      {/* Bottom Feature Strip (Dark Teal Bar) */}
+      <div className="relative z-10 bg-[#064e4b]/95 backdrop-blur-md border-t border-teal-500/20 py-6 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <a 
+                key={index} 
+                href={getWhatsAppUrl(item.title)}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-4 text-white p-2 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#009698]/30 border border-[#00c9c3]/40 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#009698] transition-all">
+                  <IconComponent className="w-6 h-6 text-[#00c9c3] group-hover:text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white group-hover:text-[#00c9c3] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-[11px] text-teal-100/80 font-medium">
+                    {item.desc}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -84,7 +84,7 @@ export const salonInfo = {
       time: "35 Mins",
       description: "Deep nourishing keratin treatment that repairs damaged hair fibers, restores natural shine, and prevents hair fall.",
       popular: true,
-      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ export const salonInfo = {
       time: "45 Mins",
       description: "Steam exfoliation, blackhead extraction, 24K gold collagen face mask, and rejuvenating facial reflexology.",
       popular: true,
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1512290900673-7002ff01e5a0?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 5,
@@ -114,7 +114,7 @@ export const salonInfo = {
       time: "25 Mins",
       description: "Ammonia-free, long-lasting gray hair coverage for beard and head hair with natural luster finish.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 7,
@@ -124,7 +124,7 @@ export const salonInfo = {
       time: "15 Mins",
       description: "Painless organic wax for unwanted nose, ear, and cheek hair line-ups.",
       popular: false,
-      image: "https://images.unsplash.com/photo-1512290900673-7002ff01e5a0?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: 8,
@@ -134,7 +134,7 @@ export const salonInfo = {
       time: "75 Mins",
       description: "Includes Executive Haircut, Signature Hot Towel Shave, Gold Facial, Scalp Massage, and Nose/Ear Waxing.",
       popular: true,
-      image: "https://images.unsplash.com/photo-1517832606589-7157a690be72?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80"
     }
   ],
 

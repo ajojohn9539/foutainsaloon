@@ -14,7 +14,10 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello Fountain Gents Saloon! Appointment Request:%0A*Name*: ${formData.name}%0A*Phone*: ${formData.phone}%0A*Service*: ${formData.service}%0A*Date*: ${formData.date}%0A*Notes*: ${formData.notes}`;
+    let msg = `Hello Fountain Gents Saloon! Appointment Request:%0A*Name*: ${formData.name}%0A*Phone*: ${formData.phone}%0A*Service*: ${formData.service}%0A*Date*: ${formData.date}`;
+    if (formData.notes) {
+      msg += `%0A*Notes*: ${formData.notes}`;
+    }
     window.open(`https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}&text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -62,15 +65,15 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#faf6f0] text-[#c6a87c] flex items-center justify-center shrink-0">
+              <a href={`tel:${salonInfo.phone.replace(/\\s+/g, '')}`} className="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#c6a87c] transition-colors group cursor-pointer">
+                <div className="w-10 h-10 rounded-xl bg-[#faf6f0] text-[#c6a87c] flex items-center justify-center shrink-0 group-hover:bg-[#c6a87c] group-hover:text-white transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-gray-900 mb-1">Direct Call & WhatsApp</h4>
+                  <h4 className="text-sm font-bold text-gray-900 mb-1 group-hover:text-[#c6a87c] transition-colors">Direct Call & WhatsApp</h4>
                   <p className="text-xs text-gray-600">{salonInfo.phoneDisplay}</p>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div>

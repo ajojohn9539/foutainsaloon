@@ -87,26 +87,32 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item, index) => {
             const IconComponent = item.icon;
+            const isClickable = item.title === "EASY BOOKING";
+            const ContainerTag = isClickable ? 'a' : 'div';
+            const linkProps = isClickable ? {
+              href: getWhatsAppUrl(item.title),
+              target: "_blank",
+              rel: "noreferrer"
+            } : {};
+
             return (
-              <a
+              <ContainerTag
                 key={index}
-                href={getWhatsAppUrl(item.title)}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-4 text-white p-2 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+                {...linkProps}
+                className={`flex items-center gap-4 text-white p-2 rounded-xl transition-all duration-300 ${isClickable ? 'hover:bg-white/10 group cursor-pointer' : ''}`}
               >
-                <div className="w-12 h-12 rounded-full bg-[#009698]/30 border border-[#00c9c3]/40 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#009698] transition-all">
-                  <IconComponent className="w-6 h-6 text-[#00c9c3] group-hover:text-white" />
+                <div className={`w-12 h-12 rounded-full bg-[#009698]/30 border border-[#00c9c3]/40 flex items-center justify-center shrink-0 transition-all ${isClickable ? 'group-hover:scale-110 group-hover:bg-[#009698]' : ''}`}>
+                  <IconComponent className={`w-6 h-6 text-[#00c9c3] ${isClickable ? 'group-hover:text-white' : ''}`} />
                 </div>
                 <div>
-                  <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white group-hover:text-[#00c9c3] transition-colors">
+                  <h3 className={`text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white transition-colors ${isClickable ? 'group-hover:text-[#00c9c3]' : ''}`}>
                     {item.title}
                   </h3>
                   <p className="text-[11px] text-teal-100/80 font-medium">
                     {item.desc}
                   </p>
                 </div>
-              </a>
+              </ContainerTag>
             );
           })}
         </div>

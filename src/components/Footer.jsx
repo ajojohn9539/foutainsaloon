@@ -1,6 +1,6 @@
 import React from 'react';
 import { salonInfo, getWhatsAppUrl } from '../data/salonData';
-import { MapPin, Phone, Clock } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail, Star } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -59,13 +59,27 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#c6a87c] shrink-0" />
-                <span>{salonInfo.phoneDisplay}</span>
+                <a href={`tel:${salonInfo.phone.replace(/\\s+/g, '')}`} className="hover:text-[#c6a87c] transition-colors">{salonInfo.phoneDisplay}</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-[#c6a87c] shrink-0" />
+                <a href={`mailto:${salonInfo.email}`} className="hover:text-[#c6a87c] transition-colors">{salonInfo.email}</a>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#c6a87c] shrink-0" />
                 <span>{salonInfo.timing}</span>
               </li>
             </ul>
+            <div className="pt-3">
+              <a 
+                href="https://maps.app.goo.gl/mAP45cgXz4v9qoKZ8" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="inline-flex items-center gap-1.5 text-[#c6a87c] hover:text-white transition-colors text-xs font-bold uppercase tracking-wider"
+              >
+                <Star className="w-4 h-4 fill-current" /> READ OUR GOOGLE REVIEWS
+              </a>
+            </div>
           </div>
 
         </div>

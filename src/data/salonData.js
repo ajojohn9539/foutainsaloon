@@ -5,12 +5,11 @@ export const salonInfo = {
   phone: "+971 55 840 1265",
   phoneDisplay: "+971 55 840 1265",
   whatsapp: "971558401265",
-  location: "Commercial Zone, Dubai, United Arab Emirates",
+  location: "Mohamed Bin Zayed City - ME10 - Abu Dhabi, United Arab Emirates",
   timing: "Everyday: 9:00 AM – 11:30 PM",
-  email: "info@fountaingentssaloon.ae",
-
+  email: "fountaingentsalon@gmail.com",
   heroTagline: "Redefining Style, Elegance & Self-Care",
-  heroTitle: "Luxury Gents Salon in Dubai",
+  heroTitle: "Fountain Gents Salon in Abu Dhabi",
   heroSubtitle: "Experience world-class European grooming, precision hair styling, executive shaves, organic facials, and relaxing deep-tissue massages.",
 
   stats: [
@@ -179,7 +178,7 @@ export const salonInfo = {
 };
 
 export const getWhatsAppUrl = (customText = "") => {
-  const defaultText = customText 
+  const defaultText = customText
     ? `Hello *Fountain Gents Saloon*, I would like to book an appointment for: *${customText}*`
     : `Hello *Fountain Gents Saloon*, I would like to book a visit.`;
   return `https://api.whatsapp.com/send/?phone=${salonInfo.whatsapp}&text=${encodeURIComponent(defaultText)}`;

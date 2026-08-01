@@ -1,112 +1,88 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { salonInfo, getWhatsAppBookingUrl } from '../data/salonData';
-import { Crown, Phone, MessageSquare, Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare } from 'lucide-react';
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-slate-950/95 backdrop-blur-md border-b border-amber-500/20 py-3 shadow-xl' : 'bg-slate-950/80 border-b border-slate-800/60 py-5'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gold-gradient p-0.5 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-              <Crown className="w-5 h-5 text-amber-400" />
-            </div>
-          </div>
-          <div>
-            <span className="font-serif text-lg sm:text-xl font-bold tracking-wider text-white block leading-none">
-              CROWN & ROYAL
-            </span>
-            <span className="text-[10px] tracking-[0.2em] font-semibold text-amber-400/90 uppercase block mt-1">
-              GENTS SALOON DUBAI
-            </span>
-          </div>
-        </a>
-
-        {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-          <a href="#" className="text-amber-400 font-semibold hover:text-amber-300 transition-colors">Home</a>
-          <a href="#about" className="text-slate-300 hover:text-amber-400 transition-colors">Why Choose Us</a>
-          <a href="#services" className="text-slate-300 hover:text-amber-400 transition-colors">Services & Pricing</a>
-          <a href="#testimonials" className="text-slate-300 hover:text-amber-400 transition-colors">Reviews</a>
-          <a href="#contact" className="text-slate-300 hover:text-amber-400 transition-colors">Location & Contact</a>
-        </nav>
-
-        {/* Right Call & WhatsApp CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <a 
-            href={`tel:${salonInfo.whatsapp}`}
-            className="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors px-3 py-2 rounded-lg bg-slate-900 border border-slate-800"
-          >
-            <Phone className="w-3.5 h-3.5 text-amber-400" />
-            <span>{salonInfo.phoneDisplay}</span>
-          </a>
-
-          <a 
-            href={getWhatsAppBookingUrl()} 
-            target="_blank" 
-            rel="noreferrer"
-            className="btn-primary text-xs py-2.5 px-5"
-          >
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>Book Visit</span>
-          </a>
+    <nav className="glass-nav py-4 px-6 md:px-12 flex items-center justify-between">
+      {/* Logo Section matching Raai Infra */}
+      <a href="#" className="flex items-center gap-3 group">
+        <div className="w-11 h-11 bg-amber-500 rounded-xl flex items-center justify-center font-black text-slate-900 text-xl shadow-md group-hover:scale-105 transition-transform">
+          R
         </div>
+        <div className="flex flex-col leading-tight">
+          <span className="text-slate-900 font-black text-base uppercase tracking-widest group-hover:text-amber-500 transition-colors">
+            CROWN & ROYAL SALOON
+          </span>
+          <span className="text-amber-500 text-xs font-semibold tracking-wider">
+            <span className="text-amber-600">R</span>edefining{" "}
+            <span className="text-amber-600">A</span>waited{" "}
+            <span className="text-amber-600">A</span>esthetic{" "}
+            <span className="text-amber-600">I</span>mpression
+          </span>
+        </div>
+      </a>
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-amber-400 hover:text-white"
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+      {/* Center Nav Links */}
+      <div className="hidden md:flex items-center space-x-8 font-semibold text-slate-700 text-sm">
+        <a href="#" className="hover:text-amber-500 transition">Home</a>
+        <a href="#about" className="hover:text-amber-500 transition">About</a>
+        <a href="#services" className="hover:text-amber-500 transition">Services</a>
+        <a href="#testimonials" className="hover:text-amber-500 transition">Reviews</a>
+        <a href="#contact" className="hover:text-amber-500 transition">Contact</a>
       </div>
 
+      {/* Right Get Quote / Book Visit CTA matching Raai Infra */}
+      <div className="hidden md:flex items-center gap-4">
+        <a 
+          href={`tel:${salonInfo.whatsapp}`}
+          className="flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-amber-500 transition px-3 py-2"
+        >
+          <Phone className="w-4 h-4 text-amber-500" />
+          <span>{salonInfo.phoneDisplay}</span>
+        </a>
+
+        <a 
+          href={getWhatsAppBookingUrl()} 
+          target="_blank" 
+          rel="noreferrer"
+          className="btn-construction"
+        >
+          Get a Quote
+        </a>
+      </div>
+
+      {/* Mobile Menu Toggle */}
+      <button
+        onClick={() => setMobileOpen(!mobileOpen)}
+        className="md:hidden p-2 text-slate-800"
+        aria-label="Toggle menu"
+      >
+        {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+
       {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950 border-b border-amber-500/20 px-6 py-6 space-y-4 animate-in slide-in-from-top-4 duration-200">
-          <a href="#" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-amber-400 font-semibold py-2">
-            <span>Home</span> <ChevronRight className="w-4 h-4" />
-          </a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-slate-300 py-2">
-            <span>Why Choose Us</span> <ChevronRight className="w-4 h-4" />
-          </a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-slate-300 py-2">
-            <span>Services & Pricing</span> <ChevronRight className="w-4 h-4" />
-          </a>
-          <a href="#testimonials" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-slate-300 py-2">
-            <span>Reviews</span> <ChevronRight className="w-4 h-4" />
-          </a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-between text-slate-300 py-2">
-            <span>Contact & Map</span> <ChevronRight className="w-4 h-4" />
-          </a>
-          <div className="pt-4 border-t border-slate-800 space-y-3">
+      {mobileOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl md:hidden">
+          <a href="#" onClick={() => setMobileOpen(false)} className="block font-semibold text-amber-500 py-1">Home</a>
+          <a href="#about" onClick={() => setMobileOpen(false)} className="block font-semibold text-slate-700 py-1">About</a>
+          <a href="#services" onClick={() => setMobileOpen(false)} className="block font-semibold text-slate-700 py-1">Services</a>
+          <a href="#testimonials" onClick={() => setMobileOpen(false)} className="block font-semibold text-slate-700 py-1">Reviews</a>
+          <a href="#contact" onClick={() => setMobileOpen(false)} className="block font-semibold text-slate-700 py-1">Contact</a>
+          <div className="pt-2 border-t border-slate-100">
             <a 
               href={getWhatsAppBookingUrl()}
               target="_blank"
               rel="noreferrer"
-              className="btn-primary w-full py-3 text-xs"
+              className="btn-construction w-full text-center"
             >
-              <MessageSquare className="w-4 h-4" />
-              <span>Book Appointment via WhatsApp</span>
+              Get a Quote / Book Visit
             </a>
           </div>
         </div>
       )}
-    </header>
+    </nav>
   );
 }

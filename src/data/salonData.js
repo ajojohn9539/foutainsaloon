@@ -6,7 +6,7 @@ export const salonInfo = {
   phoneDisplay: "+971 55 840 1265",
   whatsapp: "971558401265",
   location: "Mohamed Bin Zayed City - ME10 - Abu Dhabi, United Arab Emirates",
-  timing: "Everyday: 9:00 AM – 11:30 PM",
+  timing: "Everyday: 9:00 AM – 12:00 AM",
   email: "fountaingentsalon@gmail.com",
   heroTagline: "Redefining Style, Elegance & Self-Care",
   heroTitle: "Fountain Gents Salon in Abu Dhabi",

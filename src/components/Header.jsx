@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { salonInfo, getWhatsAppUrl } from '../data/salonData';
 import { Menu, X, MapPin, Check, MessageSquare } from 'lucide-react';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [offerModalOpen, setOfferModalOpen] = useState(false);
+  const [exclusiveOfferModalOpen, setExclusiveOfferModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setExclusiveOfferModalOpen(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const offerServices = [
     { name: "Hair Cut", price: "15 AED - 20 AED" },
@@ -176,6 +184,67 @@ export default function Header() {
       </div>
     )
   }
+
+      {/* Limited Exclusive Offer Modal (Auto-open) */}
+      {exclusiveOfferModalOpen && (
+        <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md">
+          <div className="bg-[#faf8f5] rounded-3xl w-full max-w-lg p-6 sm:p-10 relative shadow-2xl">
+            <button
+              onClick={() => setExclusiveOfferModalOpen(false)}
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-800 transition-colors bg-white rounded-full shadow-sm"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className="text-center mb-6 mt-2">
+              <span className="bg-red-100 text-red-600 text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full mb-3 inline-block">
+                Limited Time
+              </span>
+              <h2 className="font-serif text-3xl font-bold text-[#1c1c1c] uppercase tracking-wider">Exclusive Offer</h2>
+            </div>
+
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm space-y-4">
+              <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
+                <Check className="w-5 h-5 text-[#c6a87c]" />
+                <span className="text-sm font-bold text-gray-800">Hair Cutting</span>
+              </div>
+              <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
+                <Check className="w-5 h-5 text-[#c6a87c]" />
+                <span className="text-sm font-bold text-gray-800">Beard Setting</span>
+              </div>
+              <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
+                <Check className="w-5 h-5 text-[#c6a87c]" />
+                <span className="text-sm font-bold text-gray-800">Hair Setting</span>
+              </div>
+              <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
+                <Check className="w-5 h-5 text-[#c6a87c]" />
+                <span className="text-sm font-bold text-gray-800">Face Scrubbing</span>
+              </div>
+              <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
+                <Check className="w-5 h-5 text-[#c6a87c]" />
+                <span className="text-sm font-bold text-gray-800">Head Massage</span>
+              </div>
+              
+              <div className="pt-4 text-center">
+                <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Total Package Price</p>
+                <div className="text-4xl font-extrabold text-[#c6a87c]">30 AED</div>
+              </div>
+            </div>
+
+            <div className="mt-8 flex justify-center">
+              <a
+                href={getWhatsAppUrl("Limited Exclusive Offer - 30 AED")}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full bg-[#c6a87c] hover:bg-[#b09367] text-white font-bold text-sm py-4 px-8 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+              >
+                <MessageSquare className="w-5 h-5" />
+                Grab This Offer Now
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

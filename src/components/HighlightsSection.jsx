@@ -30,7 +30,7 @@ export default function HighlightsSection() {
     <section id="about" className="py-24 bg-[#faf8f5] border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column */}
           <div className="lg:col-span-6 space-y-6">
             <span className="text-[#c6a87c] text-xs font-bold uppercase tracking-widest block">
@@ -84,7 +84,7 @@ export default function HighlightsSection() {
                 <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-mono block">
                   {salonInfo.phoneDisplay}
                 </span>
-                <p className="text-[11px] text-gray-500">Available 9:00 AM – 11:30 PM Every Day</p>
+                <p className="text-[11px] text-gray-500">Available 9:00 AM – 12:00 AM Every Day</p>
               </div>
 
               <a
